@@ -6,25 +6,6 @@ function ShowDialogBox {
     )
 }
 
-Function Do-Grid{
-
-    for($i=0;$i -lt $datagridview1.RowCount;$i++){ 
-
-       if($datagridview1.Rows[$i].Cells['exp'].Value -eq $true)
-       {
-         write-host "cell #$i is checked"
-         #uncheck it
-         #$datagridview1.Rows[$i].Cells['exp'].Value=$false
-       }
-       else    
-       {
-         #check it
-         #$datagridview1.Rows[$i].Cells['exp'].Value=$true
-         write-host  "cell #$i is not-checked"
-       }
-    }
-}
-
 Add-Type -Assembly System.Windows.Forms
 $App = New-Object system.Windows.Forms.Form
 $App.Text = "CIS Benchmarks Importer for Microsoft Intune"
